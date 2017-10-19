@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <a href="{{ route('profile.index', ['username'=>$user->username]) }}" class="pull-left">
-                    <img src="../../../../evolunt/public/images/{{ $user->picture }}"
+                    <img src="/images/{{ $user->picture }}"
                          class="img-circle" style="margin-right: 10px" width="50" height="50"
                          href="{{ route('profile.index', ['username'=>$user->username]) }}"
                          alt="{{ $user->getNameOrUsername() }}" class="media-object">

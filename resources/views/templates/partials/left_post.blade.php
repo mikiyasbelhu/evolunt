@@ -6,7 +6,7 @@
             <div class="widget-body">
                 <div class="user-heading round">
                     <a href="{{ route('home') }}">
-                        <img src="../../../../evolunt/public/images/{{ Auth::user()->picture }}" alt="">
+                        <img src="/images/{{ Auth::user()->picture }}" alt="">
                     </a>
 
                     <h1>{{ Auth::user()->getNameOrUsername() }}</h1>

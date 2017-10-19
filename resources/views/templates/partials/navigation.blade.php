@@ -17,7 +17,7 @@
                     <li><a href="{{ route('profile.edit') }}">Update Profile</a></li>
                     <li><a href="{{ route('auth.signout') }}">Sign Out</a></li>
                 @else
-                    <li><a href="{{ route('register') }}">Sign up</a></li>
+                    <li><a href="{{ route('auth.signup') }}">Sign up</a></li>
                     <li><a href="{{ route('login') }}">Sign in</a></li>
                 @endif
             </ul>

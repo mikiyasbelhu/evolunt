@@ -8,21 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <!-- Bootstrap core CSS -->
-    <link href="../../../../evolunt/public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/animate.min.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/timeline.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/cover.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/buttons.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/friends.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/messages.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/fullcalendar.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/timeline.css" rel="stylesheet">
+    <link href="/css/cover.css" rel="stylesheet">
+    <link href="/css/buttons.css" rel="stylesheet">
+    <link href="/css/friends.css" rel="stylesheet">
+    <link href="/css/messages.css" rel="stylesheet">
+    <link href="/css/fullcalendar.min.css" rel="stylesheet">
 
-    <script src="../../../../evolunt/public/js/jquery.1.11.1.min.js"></script>
-    <script src="../../../../evolunt/public/js/font.js"></script>
-    <script src="../../../../evolunt/public/js/bootstrap.min.js"></script>
-    <script src="../../../../evolunt/public/js/moment.min.js"></script>
-    <script src="../../../../evolunt/public/js/fullcalendar.min.js"></script>
+    <script src="/js/jquery.1.11.1.min.js"></script>
+    <script src="/js/font.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/moment.min.js"></script>
+    <script src="/js/fullcalendar.min.js"></script>
 
     <script>
         $(".nav li").on("click", function () {
@@ -33,7 +33,7 @@
 
     <title>eVolunt</title>
 </head>
-<body class="animated fadeIn" marginwidth="0">
+<body marginwidth="0">
 @include('templates.partials.navigation')
         <!-- Begin page content -->
 @yield('whole')

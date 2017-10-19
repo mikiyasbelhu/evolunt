@@ -20,7 +20,7 @@
             <div class="box box-widget">
                 <div class="box-header with-border">
                     <div class="user-block">
-                        <img class="img-circle" src="../../../../evolunt/public/images/{{ $status->user->picture }}"
+                        <img class="img-circle" src="/images/{{ $status->user->picture }}"
                              alt="{{ $status->user->getNameOrUsername() }}">
                     <span class="username"><a
                                 href="{{ route('profile.index', ['username' => $status->user->username]) }}">{{ $status->user->getNameOrUsername() }}</a></span>
@@ -46,7 +46,7 @@
                     @foreach($status->replies as $reply)
                         <div class="box-comment">
                             <img class="img-circle img-sm"
-                                 src="../../../../evolunt/public/images/{{ $reply->user->picture }}"
+                                 src="/images/{{ $reply->user->picture }}"
                                  alt="{{ $reply->user->getNameOrUsername() }}">
 
                             <div class="comment-text">
@@ -75,7 +75,7 @@
                 <div class="box-footer" style="display: block;">
                     <form action="{{ route('status.reply',['statusId' => $status->id ])}}" method="post">
                         <img class="img-responsive img-circle img-sm"
-                             src="../../../../evolunt/public/images/{{ Auth::user()->picture }}"
+                             src="/images/{{ Auth::user()->picture }}"
                              alt="Alt Text">
 
                         <div class="img-push{{ $errors->has("reply-{$status->id}")? ' has-error' : '' }}">
@@ -150,4 +150,3 @@
     </div>
     @endif
 @endsection
-

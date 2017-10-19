@@ -5,7 +5,7 @@
         <div class="contact-box center-version">
             <a href="#">
                 <img alt="image"
-                     src="../../../../evolunt/public/images/{{ $item->picture }}">
+                     src="/images/{{ $item->picture }}">
                 <h3 class="m-b-xs"><strong>{{ $item->name }}</strong></h3>
                 <div class="font-bold">{{ $item->description }}</div>
             </a>

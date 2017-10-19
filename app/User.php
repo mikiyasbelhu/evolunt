@@ -36,6 +36,16 @@ class User extends Model implements AuthenticatableContract,CanResetPasswordCont
     ];
 
     /**
+     *  The attributes that should be casted to native types.
+     *
+     *  @var array
+     */
+    protected $casts = [
+        'settings' => 'array'
+    ];
+
+
+    /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
@@ -130,7 +140,7 @@ class User extends Model implements AuthenticatableContract,CanResetPasswordCont
     {
         return $this->hasMany('evolunt\Like','user_id');
     }
-    
+
     public function hasLikedStatus(Status $status)
     {
         return (bool) $status->likes

@@ -85,7 +85,7 @@
                                             <h5 class="media-heading"><a href="">{{ $item->name }}</a></h5>
 
                                             <p><a href="#" >
-                                                    <img src="../../../../evolunt/public/images/{{ $item->picture }}"
+                                                    <img src="/images/{{ $item->picture }}"
                                                          width="60"
                                                          height="60" href="#" alt="{{ $item->name }}"
                                                          class="media-object">

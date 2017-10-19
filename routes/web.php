@@ -326,3 +326,6 @@ Route::get('test', [
     'uses' => 'EventController@event',
     'as' => 'test'
 ]);
+
+Route::get('auth/{driver}', ['as' => 'socialAuth', 'uses' => 'Auth\RegisterController@redirectToProvider']);
+Route::get('auth/{driver}/callback', ['as' => 'socialAuthCallback', 'uses' => 'Auth\RegisterController@handleProviderCallback']);

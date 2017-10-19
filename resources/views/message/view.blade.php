@@ -24,7 +24,7 @@
                         @if(!($message->user_id == Auth::user()->id))
                             <li class="left clearfix">
                   <span class="chat-img pull-left">
-                    <img src="../../../../evolunt/public/images/{{ Auth::user()->getUser($message->user_id)->first()->picture }}"
+                    <img src="/images/{{ Auth::user()->getUser($message->user_id)->first()->picture }}"
                          alt="User Avatar">
                   </span>
 
@@ -42,7 +42,7 @@
                         @else
                             <li class="right clearfix">
                   <span class="chat-img pull-right">
-                    <img src="../../../../evolunt/public/images/{{ Auth::user()->picture }}" alt="User Avatar">
+                    <img src="/images/{{ Auth::user()->picture }}" alt="User Avatar">
                   </span>
 
                                 <div class="chat-body clearfix">
@@ -117,7 +117,7 @@
                                     @if($message->user_id == Auth::user()->id)
                                         <a href="{{ route('message.view',[' friend_id' => $message->friend_id ]) }}"
                                            class="clearfix">
-                                            <img src="../../../../evolunt/public/images/{{ Auth::user()->getUser($message->friend_id)->first()->picture }}"
+                                            <img src="/images/{{ Auth::user()->getUser($message->friend_id)->first()->picture }}"
                                                  alt="" class="img-circle">
 
                                         <div class="friend-name">
@@ -129,7 +129,7 @@
                                     @else
                                         <a href="{{ route('message.view',['friend_id' => $message->user_id ]) }}"
                                            class="clearfix">
-                                            <img src="../../../../evolunt/public/images/{{ Auth::user()->getUser($message->user_id)->first()->picture }}"
+                                            <img src="/images/{{ Auth::user()->getUser($message->user_id)->first()->picture }}"
                                                  alt="" class="img-circle">
 
                                             <div class="friend-name">

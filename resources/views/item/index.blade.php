@@ -19,7 +19,7 @@
                 <div class="contact-box center-version">
                     <a href="{{ route('item.view', ['item' => $item->id]) }}">
                         <img alt="image" class="img-circle"
-                             src="../../../../evolunt/public/images/{{ $item->picture }}">
+                             src="/images/{{ $item->picture }}">
 
                         <h3 class="m-b-xs"><strong>{{ $item->name }}</strong></h3>
 
@@ -78,7 +78,7 @@
                                             <h5 class="media-heading"><a href="">{{ $item->name }}</a></h5>
 
                                             <p><a href="#">
-                                                    <img src="../../../../evolunt/public/images/{{ $item->picture }}"
+                                                    <img src="/images/{{ $item->picture }}"
                                                          width="60"
                                                          height="60" href="#" alt="{{ $item->name }}"
                                                          class="media-object">

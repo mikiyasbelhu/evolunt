@@ -8,17 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <!-- Bootstrap core CSS -->
-    <link href="../../../../evolunt/public/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/animate.min.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/timeline.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/cover.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/forms.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/buttons.css" rel="stylesheet">
-    <link href="../../../../evolunt/public/css/agency.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/timeline.css" rel="stylesheet">
+    <link href="/css/cover.css" rel="stylesheet">
+    <link href="/css/forms.css" rel="stylesheet">
+    <link href="/css/buttons.css" rel="stylesheet">
+    <link href="/css/agency.css" rel="stylesheet">
 
-    <script src="../../../../evolunt/public/js/jquery.1.11.1.min.js"></script>
-    <script src="../../../../evolunt/public/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.1.11.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
     <title>eVolunt</title>
 </head>
@@ -30,7 +30,13 @@
             <div class="intro-lead-in">Welcome To eVolunt</div>
             <div class="intro-heading">A place to find local volunteers</div>
             <a href="{{ route('auth.signup') }}" class="page-scroll btn btn-azure btn-xl">Join</a>
+            <div class="buttonContainer">
+            <div class="raw" padding-top="2em">
+            <button href="/auth/facebook" class="loginBtn loginBtn--facebook">  Login with Facebook</button>
+            <button href="/auth/google" class="loginBtn loginBtn--google">  Login with Google</button>
+</div></div>
         </div>
+
     </div>
 </header>
 <footer class="footer">

@@ -7,6 +7,7 @@ use evolunt\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Socialite;
 
 class RegisterController extends Controller
 {
@@ -49,7 +50,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|unique:users|alpha_dash|max:20',
+            'username' => 'required|unique:users|alpha_dash|max:20',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
             'image' => 'mimes:jpeg,png,jpg,gif,svg|max:1024',
@@ -76,11 +77,13 @@ class RegisterController extends Controller
                 'email' => $data['email'],
                 'password' => bcrypt($data['password']),
                 'picture' =>  $imageName,
-                'admin' => '0',
-                'charity' => '0',
+                'name' => NULL,
                 'description' => NULL,
-                'name' => NULL
+                'admin' => '0',
+                'charity' => '0'
+
             ]);
+
         }
         else {
         return User::create([
@@ -94,4 +97,38 @@ class RegisterController extends Controller
         ]);
         }
     }
+
+    /**
+ * Redirect the user to the GitHub authentication page.
+ *
+ * @return Response
+ */
+public function redirectToProvider()
+{
+    return Socialite::driver('facebook')->redirect();
+}
+
+/**
+ * Obtain the user information from GitHub.
+ *
+ * @return Response
+ */
+public function handleProviderCallback()
+{
+    //$user = Socialite::driver('facebook')->user();
+  //  $user = Socialite::with('facebook')->user();
+  $user = Socialite::driver('facebook')->user();
+
+  $userModel = User::firstOrNew(['email' => $user->getEmail()]);
+  if (!$userModel->id) {
+      $userModel->fill([email=>getEmail()]);//Fill the user model with your data
+      $userModel->save();
+  }
+
+  Auth::login($userModel);
+
+  return redirect('my-profile')
+          ->with('message', 'You have signed in with Facebook.');
+//    return $user->getEmail();
+}
 }

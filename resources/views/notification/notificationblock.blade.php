@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                 <a href="{{ route('profile.index', ['username'=>Auth::user()->getUser($notification->user_id)->first()->username]) }}"
                    class="pull-left">
-                    <img src="../../../../evolunt/public/images/{{ Auth::user()->getUser($notification->user_id)->first()->picture }}"
+                    <img src="/images/{{ Auth::user()->getUser($notification->user_id)->first()->picture }}"
                          class="img-circle" style="margin-right: 10px" width="50" height="50"
                          href="{{ route('profile.index', ['username'=>Auth::user()->getUser($notification->user_id)->first()->username]) }}"
                          alt="{{ Auth::user()->getUser($notification->user_id)->first()->getNameOrUsername() }}"
